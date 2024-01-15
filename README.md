@@ -1,4 +1,4 @@
-# Here are 20 JavaScript problems
+# 20 JavaScript Hard Challenge
 
 ### 1. **Longest Consecutive Sequence:**
 
