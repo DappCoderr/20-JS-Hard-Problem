@@ -10,17 +10,24 @@ Output: 4
 */
 
 function longestConsecutiveSequence(arr) {
-  let count = 0;
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] < arr[j]) {
-        count++;
-      }
-    }
+  if (arr.length === 0) {
+    return 0;
   }
-  return count;
+  //sort the array using comparator function
+  let count = 1;
+  let max_count = -1;
+  arr.sort((a, b) => a - b);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i + 1] - arr[i] === 1) {
+      count++;
+    } else {
+      count = 1;
+    }
+    max_count = Math.max(max_count, count);
+  }
+  return max_count;
 }
 
-var arr = [204, 201, 100, 200, 1, 3, 202, 2, 203];
+var arr = [0, 1, 1, 1, 1, 2];
 
 console.log(longestConsecutiveSequence(arr));
