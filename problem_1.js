@@ -29,5 +29,6 @@ function longestConsecutiveSequence(arr) {
 }
 
 var arr = [0, 1, 1, 1, 1, 2];
+// var arr = [100, 4, 200, 1, 3, 2, 0];
 
 console.log(longestConsecutiveSequence(arr));
